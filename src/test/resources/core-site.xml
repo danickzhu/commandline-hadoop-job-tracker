@@ -1,0 +1,19 @@
+<configuration>
+    <property>
+        <name>mapred.job.tracker.http.address</name>
+        <value>0.0.0.0:50030</value>
+    </property>
+    <property>
+        <name>mapred.job.tracker</name>
+        <value>localhost:50070</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.webapp.address</name>
+        <value>localhost:8088</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.webapp.address</name>
+        <value>localhost:8088</value>
+    </property>
+
+</configuration>

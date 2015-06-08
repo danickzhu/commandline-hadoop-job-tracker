@@ -1,0 +1,45 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+	<id>bin</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<fileSets>
+		<fileSet>
+			<directory>${project.basedir}</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>LICENSE*</include>
+				<include>NOTICE*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/bin</directory>
+			<outputDirectory>/bin</outputDirectory>
+			<fileMode>755</fileMode>
+			<includes>
+				<include>*</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>/lib</outputDirectory>
+			<includes>
+				<include>*:${project.artifactId}*</include>
+				<include>*:scala*</include>
+				<include>*:slf4j*</include>
+				<include>*:jsoup*</include>
+				<include>*:json*</include>
+				<include>*:log4j*</include>
+			</includes>
+			<useProjectArtifact>true</useProjectArtifact>
+			<useProjectAttachments>true</useProjectAttachments>
+			<useTransitiveFiltering>false</useTransitiveFiltering>
+			<unpack>false</unpack>
+			<scope>runtime</scope>
+		</dependencySet>
+	</dependencySets>
+</assembly>

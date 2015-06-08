@@ -1,0 +1,28 @@
+
+<html><head><title>horton-jt Fair Scheduler Administration</title>
+<link rel="stylesheet" type="text/css" href="static/hadoop.css">
+</head><body>
+<h1><a href="jobtracker.jsp">horton-jt</a> Fair Scheduler Administration</h1>
+<h2>Pools</h2>
+<table border="2" cellpadding="5" cellspacing="2">
+<tr><th rowspan=2>Pool</th><th rowspan=2>Running Jobs</th><th colspan=4>Map Tasks</th><th colspan=4>Reduce Tasks</th><th rowspan=2>Scheduling Mode</th></tr>
+<tr><th>Min Share</th><th>Max Share</th><th>Running</th><th>Fair Share</th><th>Min Share</th><th>Max Share</th><th>Running</th><th>Fair Share</th></tr>
+<tr><td>etl</td><td>2</td><td>1500</td><td>8320</td><td>0</td><td>0.0</td><td>375</td><td>3200</td><td>11</td><td>11.0</td><td>FAIR</td></tr>
+<tr><td>default</td><td>3</td><td>375</td><td>8320</td><td>3</td><td>3.0</td><td>188</td><td>3200</td><td>21</td><td>22.0</td><td>FIFO</td></tr>
+</table>
+<h2>Running Jobs</h2>
+<table border="2" cellpadding="5" cellspacing="2">
+<tr><th rowspan=2>Submitted</th><th rowspan=2>JobID</th><th rowspan=2>User</th><th rowspan=2>Name</th><th rowspan=2>Pool</th><th rowspan=2>Priority</th><th colspan=3>Map Tasks</th><th colspan=3>Reduce Tasks</th></tr><tr>
+<th>Finished</th><th>Running</th><th>Fair Share</th><th>Finished</th><th>Running</th><th>Fair Share</th></tr>
+<tr>
+<td>Dec 09, 12:04</td>
+<td><a href="jobdetails.jsp?jobid=job_201412071502_29177">job_201412071502_29177</a></td><td>yshi1</td>
+<td>PigLatin:madmen_txn-dvload</td>
+<td><select id="select3768" name="select3768" onchange="window.location = '/scheduler?setPool=<CHOICE>&jobid=job_201412071502_29177'.replace('<CHOICE>', document.getElementById('select3768').value);&#10;}">
+<option value="default" selected>default</option>
+<option value="etl">etl</option>
+</select>
+</td>
+</table>
+</body>
+</html>

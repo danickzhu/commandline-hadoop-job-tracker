@@ -1,0 +1,17 @@
+CommandLine Hadoop Job tracker
+Copyright 2015 Danick Zhu (guazhu@paypal.com)
+
+This product includes software developed by The Apache Software
+Foundation (http://www.apache.org/).
+
+This product includes/uses SLF4J (http://www.slf4j.org/)
+Copyright (c) 2004-2008 QOS.ch
+All rights reserved.
+
+This product includes/uses JSOUP (http://jsoup.org/)
+Copyright © 2009 - 2013 Jonathan Hedley (jonathan@hedley.net)
+All rights reserved.
+
+This product includes/uses SCALATEST (http://scalatest.org/)
+Copyright Artima, Inc. (http://www.artima.com/).
+All rights reserved.
